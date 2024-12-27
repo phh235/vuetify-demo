@@ -19,7 +19,7 @@ onMounted(() => {
       .then(response => response.json())
       .then(user => {
         localStorage.setItem('user', JSON.stringify(user));
-        window.location.href = '/';
+        window.location.href = '/home';
       })
       .catch(error => {
         console.error('Error fetching user info:', error);
