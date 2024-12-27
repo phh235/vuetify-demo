@@ -1,17 +1,17 @@
 <template>
   <v-app class="container">
     <v-main class="d-flex justify-center align-center flex-column">
-      <div v-if="user">
-        <h1>Welcome, {{ user.name }} <span><img
+      <div v-if="user" class="text-center">
+        <h1 class="display-1 mb-4">Welcome, {{ user.name }} <span><img
               src="https://em-content.zobj.net/source/apple/391/hear-no-evil-monkey_1f649.png" alt="kon khi kho"
-              width="35"></span></h1>
-        <v-btn variant="tonal" color="deep-purple-darken-1" @click="logout" class="mt-4">
+              width="60"></span></h1>
+        <v-btn variant="tonal" color="deep-purple-darken-1" @click="logout">
           <v-icon class="mr-2">mdi-logout</v-icon>
           <span style="user-select: none !important;">Logout</span>
         </v-btn>
       </div>
-      <div v-else>
-        <h1>Welcome, Guest!</h1>
+      <div v-else class="text-center">
+        <h1 class="display-1">Welcome, Guest!</h1>
       </div>
     </v-main>
   </v-app>
@@ -49,7 +49,35 @@ const logout = () => {
   flex-direction: column;
 }
 
-.mt-4 {
-  margin-top: 1rem;
+.display-1 {
+  font-size: 3rem;
+  line-height: 1.5;
+  font-weight: 300;
+  letter-spacing: 0.0071428571em;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 420px) {
+  .display-1 {
+    font-size: 3.5rem;
+  }
+}
+
+@media (min-width: 600px) {
+  .display-1 {
+    font-size: 4rem;
+  }
+}
+
+@media (min-width: 960px) {
+  .display-1 {
+    font-size: 4.5rem;
+  }
+}
+
+@media (min-width: 1264px) {
+  .display-1 {
+    font-size: 5rem;
+  }
 }
 </style>
